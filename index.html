@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>DOM-WIKI</title>
+	<link rel="stylesheet" href="./src/style.css" />
+	<script type="module">
+		import App from "./src/App.js";
+	</script>
+</head>
+
+<body>
+	<div id="interface">
+		<header>
+			<h1>DOM-WIKI</h1>
+		</header>
+		<footer><span>&copy; 2020</span><strong>DOM-WIKI</strong></footer>
+		<div class="body" id="app">
+			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">Un article de Wikipédia, l'encyclopédie libre.</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr">
+					<div class="mw-parser-output">
+						<div class="infobox_v3">
+							<div class="entete icon informatique">
+								<div>Document Object Model</div>
+							</div>
+							
+							<div class="images"><a href="//commons.wikimedia.org/w/index.php?title=File:DOM-model.svg&amp;lang=fr&amp;uselang=fr" class="image"><img alt="Description de cette image, également commentée ci-après" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/langfr-220px-DOM-model.svg.png" decoding="async" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/langfr-330px-DOM-model.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5a/DOM-model.svg/langfr-440px-DOM-model.svg.png 2x" data-file-width="428" data-file-height="443" width="220" height="228"></a>
+							</div>
+							<div class="legend">Représentation DOM d'une page HTML.</div>
+							<table>
+								<caption>Informations</caption>
+								<tbody>
+									<tr>
+										<th scope="row"><a href="/wiki/D%C3%A9p%C3%B4t_(informatique)" title="Dépôt (informatique)">Dépôt</a></th>
+										<td>
+											<span class="wd_p1324"><a rel="nofollow" class="external text" href="https://github.com/whatwg/dom">github.com/whatwg/dom</a><span class="noprint wikidata-linkback"><a href="https://www.wikidata.org/wiki/?uselang=fr#P1324" title="Voir et modifier les données sur Wikidata"><img alt="Voir et modifier les données sur Wikidata" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/10px-Blue_pencil.svg.png" decoding="async" style="vertical-align: baseline" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/15px-Blue_pencil.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/20px-Blue_pencil.svg.png 2x" data-file-width="600" data-file-height="600" width="10" height="10"></a></span></span></td>
+									</tr>
+									<tr>
+										<th scope="row"> Type
+										</th>
+										<td>
+											<span class="wd_p31"><a href="/wiki/Interface_de_programmation" title="Interface de programmation">Interface de
+													programmation</a><br>Web API <small>(<a href="https://en.wikipedia.org/wiki/Web_API_(content-facing)" class="extiw" title="en:Web API (content-facing)"><span class="indicateur-langue" title="Article sur Wikipédia en anglais">en</span></a>)</small><span class="noprint wikidata-linkback"><a href="https://www.wikidata.org/wiki/Q2093?uselang=fr#P31" title="Voir et modifier les données sur Wikidata"><img alt="Voir et modifier les données sur Wikidata" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/10px-Blue_pencil.svg.png" decoding="async" style="vertical-align: baseline" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/15px-Blue_pencil.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/20px-Blue_pencil.svg.png 2x" data-file-width="600" data-file-height="600" width="10" height="10"></a></span></span></td>
+									</tr>
+
+
+
+									<tr>
+										<th scope="row"><a href="/wiki/Licence_de_logiciel" title="Licence de logiciel">Licence</a></th>
+										<td>
+											<span class="wd_p275">Creative Commons Attribution 4.0 International
+												<small>(<a href="https://www.wikidata.org/wiki/Q20007257" class="extiw" title="d:Q20007257"><span class="indicateur-langue" title="Voir l'élément Wikidata correspondant">d</span></a>)</small><span class="noprint wikidata-linkback"><a href="https://www.wikidata.org/wiki/?uselang=fr#P275" title="Voir et modifier les données sur Wikidata"><img alt="Voir et modifier les données sur Wikidata" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/10px-Blue_pencil.svg.png" decoding="async" style="vertical-align: baseline" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/15px-Blue_pencil.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/20px-Blue_pencil.svg.png 2x" data-file-width="600" data-file-height="600" width="10" height="10"></a></span></span></td>
+									</tr>
+
+									<tr>
+										<th scope="row"><a href="/wiki/Site_web" title="Site web">Site web</a></th>
+										<td>
+											<span class="wd_p856"><a rel="nofollow" class="external text" href="https://www.w3.org/DOM">www.w3.org/DOM</a>, <a rel="nofollow" class="external text" href="https://www.w3.org/standards/techs/dom">www.w3.org/standards/techs/dom</a>
+												et <a rel="nofollow" class="external text" href="https://dom.spec.whatwg.org/">dom.spec.whatwg.org</a><span class="noprint wikidata-linkback"><a href="https://www.wikidata.org/wiki/?uselang=fr#P856" title="Voir et modifier les données sur Wikidata"><img alt="Voir et modifier les données sur Wikidata" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/10px-Blue_pencil.svg.png" decoding="async" style="vertical-align: baseline" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/15px-Blue_pencil.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/73/Blue_pencil.svg/20px-Blue_pencil.svg.png 2x" data-file-width="600" data-file-height="600" width="10" height="10"></a></span></span></td>
+									</tr>
+
+								</tbody>
+							</table>
+							<p class="mw-empty-elt">
+
+							</p>
+							<p class="navbar bordered noprint"><span class="plainlinks"><a class="external text" href="https://fr.wikipedia.org/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=0">modifier</a>
+									- <a class="external text" href="https://fr.wikipedia.org/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=0">modifier
+										le code</a> - <a href="https://www.wikidata.org/wiki/Special:ItemByTitle/frwiki/Document_Object_Model" class="extiw" title="d:Special:ItemByTitle/frwiki/Document Object Model">voir
+										Wikidata</a> <a href="/wiki/Aide:Infobox_Wikidata" title="Aide:Infobox Wikidata">(aide)</a></span> <a href="/wiki/Mod%C3%A8le:Infobox_Logiciel" title="Consultez la documentation du modèle"><img alt="Consultez la documentation du modèle" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Gtk-dialog-info.svg/12px-Gtk-dialog-info.svg.png" decoding="async" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Gtk-dialog-info.svg/18px-Gtk-dialog-info.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Gtk-dialog-info.svg/24px-Gtk-dialog-info.svg.png 2x" data-file-width="60" data-file-height="60" width="12" height="12"></a></p>
+						</div>
+						<p>Le <b>Document Object Model</b> (<b>DOM</b>) est une <a href="/wiki/Interface_de_programmation" title="Interface de programmation">interface de
+								programmation</a> normalisée par le <a href="/wiki/W3C" class="mw-redirect" title="W3C">W3C</a>, qui permet à des scripts d'examiner et de modifier le contenu du <a href="/wiki/Navigateur_web" title="Navigateur web">navigateur web</a><sup id="cite_ref-paul_wang_1-0" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>. Par
+							le DOM, la composition d'un document <a href="/wiki/HTML" class="mw-redirect" title="HTML">HTML</a> ou <a href="/wiki/XML" class="mw-redirect" title="XML">XML</a> est
+							représentée sous forme d'un jeu d'objets&nbsp;–&nbsp;lesquels peuvent représenter une
+							fenêtre, une phrase ou un style, par exemple&nbsp;–&nbsp;reliés selon une structure en <a href="/wiki/Arbre_(informatique)" class="mw-redirect" title="Arbre (informatique)">arbre</a><sup id="cite_ref-paul_wang_1-1" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>. À
+							l'aide du DOM, un script peut modifier le document présent dans le navigateur en ajoutant ou
+							en supprimant des nœuds de l'arbre<sup id="cite_ref-paul_wang_1-2" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.
+						</p>
+						<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none">
+							<div class="toctitle" dir="ltr" lang="fr">
+								<h2 id="mw-toc-heading">Sommaire</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span>
+							</div>
+							<ul>
+								<li class="toclevel-1 tocsection-1"><a href="#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+								<li class="toclevel-1 tocsection-2"><a href="#Histoire"><span class="tocnumber">2</span>
+										<span class="toctext">Histoire</span></a></li>
+								<li class="toclevel-1 tocsection-3"><a href="#Mise_en_œuvre"><span class="tocnumber">3</span> <span class="toctext">Mise en œuvre</span></a>
+								</li>
+								<li class="toclevel-1 tocsection-4"><a href="#Évolution_du_DOM_au_sein_des_navigateurs_web"><span class="tocnumber">4</span> <span class="toctext">Évolution du DOM au sein
+											des navigateurs web</span></a>
+									<ul>
+										<li class="toclevel-2 tocsection-5"><a href="#DOM_1"><span class="tocnumber">4.1</span> <span class="toctext">DOM 1</span></a>
+										</li>
+										<li class="toclevel-2 tocsection-6"><a href="#DOM_2"><span class="tocnumber">4.2</span> <span class="toctext">DOM 2</span></a>
+										</li>
+										<li class="toclevel-2 tocsection-7"><a href="#DOM_3_et_4"><span class="tocnumber">4.3</span> <span class="toctext">DOM 3 et
+													4</span></a></li>
+									</ul>
+								</li>
+								<li class="toclevel-1 tocsection-8"><a href="#Aspects_techniques"><span class="tocnumber">5</span> <span class="toctext">Aspects
+											techniques</span></a></li>
+								<li class="toclevel-1 tocsection-9"><a href="#Événements"><span class="tocnumber">6</span> <span class="toctext">Événements</span></a></li>
+								<li class="toclevel-1 tocsection-10"><a href="#Notes_et_références"><span class="tocnumber">7</span> <span class="toctext">Notes et
+											références</span></a></li>
+								<li class="toclevel-1 tocsection-11"><a href="#Liens_externes"><span class="tocnumber">8</span> <span class="toctext">Liens externes</span></a>
+								</li>
+							</ul>
+						</div>
+
+						<h2><span class="mw-headline" id="Description">Description</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=1" class="mw-editsection-visualeditor" title="Modifier la section : Description">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=1" title="Modifier la section : Description">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+						<p><i>Document Object Model</i> (DOM) signifie «&nbsp;modèle d'objets de document&nbsp;»<sup id="cite_ref-keith_2-0" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>.
+						</p>
+						<dl>
+							<dt>Modèle</dt>
+							<dd>Un modèle sert à représenter quelque chose, comme le plan d'une ville. Le DOM représente
+								le document qui se trouve dans le navigateur<sup id="cite_ref-keith_2-1" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>.
+							</dd>
+							<dt>Objet</dt>
+							<dd>En programmation, un objet est un conteneur qui comporte des propriétés et des méthodes
+								– qui sont des variables et des actions concernant ce qu'il représente<sup id="cite_ref-keith_2-2" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>.
+								Les objets du DOM peuvent représenter une fenêtre, un document, une phrase, un
+								style…<sup id="cite_ref-paul_wang_1-3" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup></dd>
+							<dt>Document</dt>
+							<dd>Le DOM concerne un document, tel qu'une page web affichée dans un navigateur<sup id="cite_ref-keith_2-3" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>.
+								Une page web commence par une balise
+								<code><a href="/wiki/Doctype" title="Doctype">!DOCTYPE</a></code> suivi de la balise
+								<code>&lt;html&gt;</code>dans laquelle se trouve le reste du document<sup id="cite_ref-keith_2-4" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>.
+								Le DOM représente le document affiché par une structure en arbre, comportant des nœuds
+								(branches et feuilles)<sup id="cite_ref-keith_2-5" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>.</dd>
+						</dl>
+						<h2><span class="mw-headline" id="Histoire">Histoire</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=2" class="mw-editsection-visualeditor" title="Modifier la section : Histoire">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=2" title="Modifier la section : Histoire">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+						<p>À l'origine, le DOM (niveau 0, <i>legacy</i>) était un ensemble d'objets mis à disposition
+							par <a href="/wiki/Netscape_Navigator" title="Netscape Navigator">Netscape Navigator</a>,
+							dont la version 4 parut en <time class="nowrap" datetime="1997-06" data-sort-value="1997-06">juin 1997</time>. <a href="/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer</a> 4 suivit en octobre la même année. Ces
+							deux navigateurs intégraient le support du <a href="/wiki/DHTML" class="mw-redirect" title="DHTML">DHTML</a><sup id="cite_ref-keith_2-6" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>, lequel requérait des extensions alors
+							offertes par le DOM rudimentaire d'alors. Le document pouvait désormais être manipulé à
+							travers le DOM&nbsp;; cependant le même document n'était pas représenté de la même manière
+							par les deux navigateurs. Ce problème a progressivement disparu avec l'adoption du DOM
+							normalisé par le W3C<sup id="cite_ref-keith_2-7" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>. Le DOM (niveau 4) est aujourd'hui
+							incorporé dans la norme <a href="/wiki/HTML5" title="HTML5">HTML5</a><sup id="cite_ref-paul_wang_1-4" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.
+						</p>
+						<h2><span id="Mise_en_.C5.93uvre"></span><span class="mw-headline" id="Mise_en_œuvre">Mise en
+								œuvre</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=3" class="mw-editsection-visualeditor" title="Modifier la section : Mise en œuvre">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=3" title="Modifier la section : Mise en œuvre">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+						<p>La spécification du <a href="/wiki/W3C" class="mw-redirect" title="W3C">W3C</a> stipule les
+							<a href="/wiki/Objet_(informatique)" title="Objet (informatique)">objets</a> ainsi que les
+							méthodes et les propriétés qu'un <a href="/wiki/Navigateur_web" title="Navigateur web">navigateur web</a> doit impérativement mettre à disposition<sup id="cite_ref-paul_wang_1-5" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.
+							Les principales catégories d'objet d'un arbre DOM sont le document, les éléments et les
+							attributs<sup id="cite_ref-paul_wang_1-6" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.
+						</p>
+						<ul>
+							<li>le <code>document</code> expose des informations concernant l'ensemble du document HTML
+								ainsi que la balise <code>&lt;html&gt;</code><sup id="cite_ref-paul_wang_1-7" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.
+							</li>
+							<li>chaque <code>element</code> expose une balise d'un document HTML ou XML, et comporte une
+								propriété <code>attributes</code> qui expose les attributs de la balise. Chaque élément
+								comporte des méthodes permettant d'accéder aux éléments parent, enfant et frères de
+								l'arbre DOM<sup id="cite_ref-paul_wang_1-8" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.</li>
+							<li>chaque <code>text</code> contient le texte qui se trouve à l'intérieur d'une balise<sup id="cite_ref-paul_wang_1-9" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.
+							</li>
+						</ul>
+						<p>Chaque navigateur met en œuvre le DOM dans son langage de programmation. La spécification du
+							DOM est alignée avec le langage <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a>, reconnu par tous les navigateurs web<sup id="cite_ref-paul_wang_1-10" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.
+							N'importe quelle partie d'une page web peut ainsi être modifiée par programmation, et le
+							programme fonctionnera sur n'importe quel navigateur web conforme à la norme DOM<sup id="cite_ref-paul_wang_1-11" class="reference"><a href="#cite_note-paul_wang-1"><span class="cite_crochet">[</span>1<span class="cite_crochet">]</span></a></sup>.
+						</p>
+						<p>Techniquement le DOM permet de lire et modifier n'importe quel document utilisant des
+							balises, avec n'importe quel langage de programmation qui offre une interface de
+							programmation DOM<sup id="cite_ref-keith_2-8" class="reference"><a href="#cite_note-keith-2"><span class="cite_crochet">[</span>2<span class="cite_crochet">]</span></a></sup>.
+						</p>
+						<h2><span id=".C3.89volution_du_DOM_au_sein_des_navigateurs_web"></span><span class="mw-headline" id="Évolution_du_DOM_au_sein_des_navigateurs_web">Évolution du DOM
+								au sein des navigateurs web</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=4" class="mw-editsection-visualeditor" title="Modifier la section : Évolution du DOM au sein des navigateurs web">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=4" title="Modifier la section : Évolution du DOM au sein des navigateurs web">modifier
+									le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+						<p>Avant sa standardisation par le <a href="/wiki/World_Wide_Web_Consortium" title="World Wide Web Consortium">W3C</a>, chaque <a href="/wiki/Navigateur_web" title="Navigateur web">navigateur web</a> disposait de son propre <i>Document Object
+								Model</i>. Si le langage de base destiné à manipuler les documents web a vite été
+							standardisé autour de <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a>, il n'en
+							a pas été de même pour la série précise de fonctions à utiliser et la manière de parcourir
+							le document. Par exemple, lorsque <a href="/wiki/Netscape_Navigator" title="Netscape Navigator">Netscape Navigator</a> préconisait de parcourir un tableau
+							indexé nommé <code><tt>document.layers[]</tt></code>, <a href="/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer</a> l'appelait plutôt
+							<code><tt>document.all[]</tt></code>, et ainsi de suite. En pratique, cela obligeait à
+							écrire (au moins) deux versions de chaque morceau de script si l'on voulait rendre son site
+							accessible au plus grand nombre.
+						</p>
+						<p>La standardisation de ces techniques s'est faite en plusieurs étapes, lesquelles étendent
+							chaque fois les possibilités précédentes sans jamais les remettre en cause.
+						</p>
+						<h3><span class="mw-headline" id="DOM_1">DOM 1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=5" class="mw-editsection-visualeditor" title="Modifier la section : DOM 1">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=5" title="Modifier la section : DOM 1">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h3>
+						<p>La première est le DOM Level 1 publié en <a href="/wiki/1998" title="1998">1998</a> (le
+							niveau 0 étant considéré comme l'implémentation de base figurant dans Netscape Navigator
+							2.0), où le W3C a défini une manière précise de représenter un document (en particulier un
+							document <a href="/wiki/Extensible_Markup_Language" title="Extensible Markup Language">XML</a>) sous la forme d'un arbre. Chaque élément
+							généré à partir du balisage comme, dans le cas de HTML, un paragraphe, un titre ou un bouton
+							de formulaire, y forme un nœud. Est également définie une série de fonctions permettant de
+							se déplacer dans cet arbre, d'y ajouter, modifier ou supprimer des éléments. En plus des
+							fonctions génériques applicables à tout document structuré, des fonctions particulières ont
+							été définies pour les documents HTML, permettant par exemple la gestion des formulaires. Le
+							DOM Level 1 a été disponible dans sa plus grande partie dès les premières versions
+							d'Internet Explorer 5 et de Netscape 6.
+						</p>
+						<h3><span class="mw-headline" id="DOM_2">DOM 2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=6" class="mw-editsection-visualeditor" title="Modifier la section : DOM 2">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=6" title="Modifier la section : DOM 2">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h3>
+						<p>La seconde étape est le DOM Level 2 (publié en <a href="/wiki/2000" title="2000">2000</a>), à
+							présent constitué de six parties (en plus de <i>Core</i> et <i>HTML</i>, on trouvera
+							<i>Events</i>, <i>Style</i>, <i>View</i> et <i>Traversal and Range</i>). Dans les évolutions
+							de la brique de base (Core), on notera la possibilité d'identifier plus rapidement un nœud
+							ou un groupe de nœuds au sein du document. Ainsi, pour obtenir un élément particulier on ne
+							le recherchera plus dans un tableau comme dans les DOM <a href="/wiki/Logiciel_propri%C3%A9taire" title="Logiciel propriétaire">propriétaires</a>
+							précédents, mais on appellera la fonction <tt>getElementById()</tt>.
+						</p>
+						<h3><span class="mw-headline" id="DOM_3_et_4">DOM 3 et 4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=7" class="mw-editsection-visualeditor" title="Modifier la section : DOM 3 et 4">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=7" title="Modifier la section : DOM 3 et 4">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h3>
+						<p>Le troisième niveau, publié au printemps 2004<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span class="cite_crochet">[</span>3<span class="cite_crochet">]</span></a></sup>, a ajouté le support de <a href="/wiki/XPath" title="XPath">XPath</a>, la gestion d'événements clavier, et une
+							interface de sérialisation de documents XML. Le quatrième niveau est en cours de
+							développement, le <i>Last Call Working Draft</i> ayant été diffusé en <time class="nowrap" datetime="2014-02" data-sort-value="2014-02">février 2014</time><sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span class="cite_crochet">[</span>4<span class="cite_crochet">]</span></a></sup>.
+						</p>
+						<h2><span class="mw-headline" id="Aspects_techniques">Aspects techniques</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=8" class="mw-editsection-visualeditor" title="Modifier la section : Aspects techniques">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=8" title="Modifier la section : Aspects techniques">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+						<p>DOM permet de représenter la structure d'un document et de ses éléments sous forme d'un
+							arbre. Il est donc préférable de parcourir et de mémoriser l'intégralité du document avant
+							de pouvoir effectuer les traitements voulus. Pour cette raison, les programmes utilisant DOM
+							ont souvent une empreinte mémoire volumineuse en cours de traitement. À l'inverse, à partir
+							d'un arbre DOM donné, il est possible de générer des documents dans le <a href="/wiki/Langage_de_balisage" title="Langage de balisage">langage de balisage</a>
+							voulu, qui pourront à leur tour être manipulés par l'interface DOM.
+						</p>
+						<p>DOM est utilisé pour pouvoir modifier facilement des documents <a href="/wiki/Extensible_markup_language" class="mw-redirect" title="Extensible markup language">XML</a> ou accéder au contenu des pages web. Dans les
+							cas ne nécessitant pas de manipuler les documents XML, mais juste de les lire, la méthode <a href="/wiki/Simple_API_for_XML" title="Simple API for XML">SAX</a> peut également être
+							choisie car elle traite les éléments de façon successive sans charger le document en
+							mémoire. Elle s'impose quand la taille du document excède la capacité de la mémoire.
+						</p>
+						<h2><span id=".C3.89v.C3.A9nements"></span><span class="mw-headline" id="Événements">Événements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=9" class="mw-editsection-visualeditor" title="Modifier la section : Événements">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=9" title="Modifier la section : Événements">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+						<p>La capture d'un événement consiste à exécuter une action (par exemple un programme en <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a>) lorsque l'événement surveillé
+							se produit dans le document. Les événements capturables du DOM sont<sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span class="cite_crochet">[</span>5<span class="cite_crochet">]</span></a></sup>&nbsp;:
+						</p>
+						<ul>
+							<li>Événements page et fenêtre
+								<ul>
+									<li><code>onabort</code> — s'il y a une interruption de chargement</li>
+									<li><code>onerror</code> — en cas d'erreur pendant le chargement de la page</li>
+									<li><code>onload</code> — après la fin du chargement de la page</li>
+									<li><code>onbeforeunload</code> — se produit juste avant de décharger la page en
+										cours (par changement de page, en quittant)</li>
+									<li><code>onunload</code> — se produit lors du déchargement de la page (par
+										changement de page, en quittant)</li>
+									<li><code>onresize</code> — quand la fenêtre est redimensionnée</li>
+								</ul>
+							</li>
+							<li>Événements souris
+								<ul>
+									<li><code>onclick</code> — sur un simple clic</li>
+									<li><code>ondblclick</code> — sur un double clic</li>
+									<li><code>onmousedown</code> — lorsque le bouton de la souris est enfoncé, sans
+										forcément le relâcher</li>
+									<li><code>onmousemove</code> — lorsque le curseur est déplacé</li>
+									<li><code>onmouseout</code> — lorsque le curseur sort de l'élément</li>
+									<li><code>onmouseover</code> — lorsque le curseur se trouve sur l'élément</li>
+									<li><code>onmouseup</code> — lorsque le bouton de la souris est relâché</li>
+									<li><code>onscroll</code> — lorsque le scroll de la souris est utilisé</li>
+								</ul>
+							</li>
+							<li>Événements clavier
+								<ul>
+									<li><code>onkeydown</code> — lorsqu'une touche est enfoncée</li>
+									<li><code>onkeypress</code> — lorsqu'une touche est pressée et relâchée</li>
+									<li><code>onkeyup</code> — lorsqu'une touche est relâchée</li>
+								</ul>
+							</li>
+							<li>Événements formulaire
+								<ul>
+									<li><code>onblur</code> — à la perte du focus</li>
+									<li><code>onchange</code> — à la perte du focus, si la valeur a changé</li>
+									<li><code>onfocus</code> — lorsque l'élément obtient le focus (ou devient actif)
+									</li>
+									<li><code>onreset</code> — lors de la remise à zéro du formulaire (via un bouton ou
+										une fonction <code>reset()</code>)</li>
+									<li><code>onselect</code> — quand du texte est sélectionné</li>
+									<li><code>onsubmit</code> — quand le formulaire est validé (via un bouton ou une
+										fonction <code>submit()</code>)</li>
+								</ul>
+							</li>
+						</ul>
+						<h2><span id="Notes_et_r.C3.A9f.C3.A9rences"></span><span class="mw-headline" id="Notes_et_références">Notes et références</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=10" class="mw-editsection-visualeditor" title="Modifier la section : Notes et références">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=10" title="Modifier la section : Notes et références">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+						<div class="references-small decimal">
+							<div class="mw-references-wrap">
+								<ol class="references">
+									<li id="cite_note-paul_wang-1"><span class="mw-cite-backlink noprint">↑ <sup><a href="#cite_ref-paul_wang_1-0"><span class="cite-accessibility-label">Revenir plus haut en&nbsp;:
+													</span>a</a> <a href="#cite_ref-paul_wang_1-1">b</a> <a href="#cite_ref-paul_wang_1-2">c</a> <a href="#cite_ref-paul_wang_1-3">d</a> <a href="#cite_ref-paul_wang_1-4">e</a> <a href="#cite_ref-paul_wang_1-5">f</a> <a href="#cite_ref-paul_wang_1-6">g</a> <a href="#cite_ref-paul_wang_1-7">h</a> <a href="#cite_ref-paul_wang_1-8">i</a> <a href="#cite_ref-paul_wang_1-9">j</a> <a href="#cite_ref-paul_wang_1-10">k</a> et <a href="#cite_ref-paul_wang_1-11">l</a></sup> </span><span class="reference-text"><abbr class="abbr indicateur-langue" title="Langue : anglais">(en)</abbr>Paul S. Wang, <i>Dynamic Web
+												Programming and HTML5</i>, CRC Press, 2012, <small style="line-height:1em;">(<a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="/wiki/Sp%C3%A9cial:Ouvrages_de_r%C3%A9f%C3%A9rence/9781439871829" title="Spécial:Ouvrages de référence/9781439871829"><span class="nowrap">9781439871829</span></a>)</small></span>
+									</li>
+									<li id="cite_note-keith-2"><span class="mw-cite-backlink noprint">↑ <sup><a href="#cite_ref-keith_2-0"><span class="cite-accessibility-label">Revenir plus haut en&nbsp;:
+													</span>a</a> <a href="#cite_ref-keith_2-1">b</a> <a href="#cite_ref-keith_2-2">c</a> <a href="#cite_ref-keith_2-3">d</a>
+												<a href="#cite_ref-keith_2-4">e</a> <a href="#cite_ref-keith_2-5">f</a>
+												<a href="#cite_ref-keith_2-6">g</a> <a href="#cite_ref-keith_2-7">h</a>
+												et <a href="#cite_ref-keith_2-8">i</a></sup> </span><span class="reference-text"><abbr class="abbr indicateur-langue" title="Langue : anglais">(en)</abbr> Jeremy Keith et Jeffrey Sambells,
+											<i>DOM Scripting: Web Design with JavaScript and the Document Object
+												Model</i>, Apress - 2010, <small style="line-height:1em;">(<a href="/wiki/International_Standard_Book_Number" title="International Standard Book Number">ISBN</a>&nbsp;<a href="/wiki/Sp%C3%A9cial:Ouvrages_de_r%C3%A9f%C3%A9rence/9781430233893" title="Spécial:Ouvrages de référence/9781430233893"><span class="nowrap">9781430233893</span></a>)</small></span>
+									</li>
+									<li id="cite_note-3"><span class="mw-cite-backlink noprint"><a href="#cite_ref-3" aria-label="Revenir plus haut" title="Revenir plus haut">↑</a>
+										</span><span class="reference-text"><a rel="nofollow" class="external free" href="http://www.w3.org/TR/DOM-Level-3-Core/">http://www.w3.org/TR/DOM-Level-3-Core/</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.w3.org%2FTR%2FDOM-Level-3-Core%2F" title="archive sur Wikiwix">archive</a>]</small>.</span>
+									</li>
+									<li id="cite_note-4"><span class="mw-cite-backlink noprint"><a href="#cite_ref-4" aria-label="Revenir plus haut" title="Revenir plus haut">↑</a>
+										</span><span class="reference-text"><a rel="nofollow" class="external free" href="http://www.w3.org/TR/dom/">http://www.w3.org/TR/dom/</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.w3.org%2FTR%2Fdom%2F" title="archive sur Wikiwix">archive</a>]</small>.</span>
+									</li>
+									<li id="cite_note-5"><span class="mw-cite-backlink noprint"><a href="#cite_ref-5" aria-label="Revenir plus haut" title="Revenir plus haut">↑</a>
+										</span><span class="reference-text"><span class="ouvrage" id="2012"><a rel="nofollow" class="external text" href="http://www.w3.org/TR/DOM-Level-3-Events/">«&nbsp;<cite style="font-style:normal;">Document Object Model (DOM) Level 3
+														Events Specification</cite>&nbsp;»</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.w3.org%2FTR%2FDOM-Level-3-Events%2F" title="archive sur Wikiwix">archive</a>]</small>, <a href="/wiki/W3C" class="mw-redirect" title="W3C">W3C</a>, <time class="nowrap" datetime="2012-09-06" data-sort-value="2012-09-06">6
+													septembre 2012</time></span>.</span>
+									</li>
+								</ol>
+							</div>
+						</div>
+						<h2><span class="mw-headline" id="Liens_externes">Liens externes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Document_Object_Model&amp;veaction=edit&amp;section=11" class="mw-editsection-visualeditor" title="Modifier la section : Liens externes">modifier</a><span class="mw-editsection-divider"> | </span><a href="/w/index.php?title=Document_Object_Model&amp;action=edit&amp;section=11" title="Modifier la section : Liens externes">modifier le code</a><span class="mw-editsection-bracket">]</span></span></h2>
+						<ul>
+							<li><cite class="ouvrage" id="site_officiel" style="font-style: normal;"><abbr class="abbr indicateur-langue" title="Langue : anglais">(en)</abbr> <a rel="nofollow" class="external text" href="http://www.w3.org/DOM/">Site
+										officiel</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.w3.org%2FDOM%2F" title="archive sur Wikiwix">archive</a>]</small></cite></li>
+							<li><abbr class="abbr indicateur-langue" title="Langue : français">(fr)</abbr> <a rel="nofollow" class="external text" href="https://developer.mozilla.org/fr/docs/Web/API/R%C3%A9f%C3%A9rence_du_DOM_Gecko">Référence
+									du DOM <i>en français</i> sur MDN</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=https%3A%2F%2Fdeveloper.mozilla.org%2Ffr%2Fdocs%2FWeb%2FAPI%2FR%25C3%25A9f%25C3%25A9rence_du_DOM_Gecko" title="archive sur Wikiwix">archive</a>]</small></li>
+							<li><abbr class="abbr indicateur-langue" title="Langue : français">(fr)</abbr> <a rel="nofollow" class="external text" href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/">Traduction française de la
+									recommandation DOM Level 1 du W3C</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fxmlfr.org%2Fw3c%2FTR%2FREC-DOM-Level-1%2F" title="archive sur Wikiwix">archive</a>]</small></li>
+							<li><abbr class="abbr indicateur-langue" title="Langue : français">(fr)</abbr> <a rel="nofollow" class="external text" href="http://www.yoyodesign.org/doc/w3c/w3c.html#dom2-core">Traduction française des
+									recommandations DOM Level 2 du W3C.</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.yoyodesign.org%2Fdoc%2Fw3c%2Fw3c.html%23dom2-core" title="archive sur Wikiwix">archive</a>]</small></li>
+							<li><abbr class="abbr indicateur-langue" title="Langue : anglais">(en)</abbr> <a rel="nofollow" class="external text" href="http://www.quirksmode.org/dom/intro.html">Introduction au DOM W3C, sur le site
+									Quirksmode.org</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.quirksmode.org%2Fdom%2Fintro.html" title="archive sur Wikiwix">archive</a>]</small></li>
+							<li><abbr class="abbr indicateur-langue" title="Langue : anglais">(en)</abbr> <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en/docs/Gecko_DOM_Reference">Gecko DOM
+									Reference, référence combinée sur DOM Level 1 et 2</a><small class="cachelinks">&nbsp;[<a href="http://archive.wikiwix.com/cache/?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen%2Fdocs%2FGecko_DOM_Reference" title="archive sur Wikiwix">archive</a>]</small></li>
+						</ul>
+						<ul id="bandeau-portail" class="bandeau-portail">
+							<li><span class="bandeau-portail-element"><span class="bandeau-portail-icone"><a href="/wiki/Portail:Informatique" title="Portail de l’informatique"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/24px-Circle-icons-computer.svg.png" decoding="async" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/36px-Circle-icons-computer.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/48px-Circle-icons-computer.svg.png 2x" data-file-width="512" data-file-height="512" width="24" height="24"></a></span> <span class="bandeau-portail-texte"><a href="/wiki/Portail:Informatique" title="Portail:Informatique">Portail de
+											l’informatique</a></span> </span></li>
+							<li><span class="bandeau-portail-element"><span class="bandeau-portail-icone"><a href="/wiki/Portail:Internet" title="Portail d’Internet"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Circle-icons-email.svg/24px-Circle-icons-email.svg.png" decoding="async" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Circle-icons-email.svg/36px-Circle-icons-email.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Circle-icons-email.svg/48px-Circle-icons-email.svg.png 2x" data-file-width="512" data-file-height="512" width="24" height="24"></a></span> <span class="bandeau-portail-texte"><a href="/wiki/Portail:Internet" title="Portail:Internet">Portail
+											d’Internet</a></span> </span></li>
+							<li><span class="bandeau-portail-element"><span class="bandeau-portail-icone"><a href="/wiki/Portail:Web_s%C3%A9mantique" title="Portail du Web sémantique"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Logo_Semantic_Web.svg/24px-Logo_Semantic_Web.svg.png" decoding="async" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/16/Logo_Semantic_Web.svg/36px-Logo_Semantic_Web.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/16/Logo_Semantic_Web.svg/48px-Logo_Semantic_Web.svg.png 2x" data-file-width="94" data-file-height="94" width="24" height="24"></a></span> <span class="bandeau-portail-texte"><a href="/wiki/Portail:Web_s%C3%A9mantique" title="Portail:Web sémantique">Portail du Web sémantique</a></span> </span>
+							</li>
+						</ul>
+						<!-- 
+	NewPP limit report
+	Parsed by mw2329
+	Cached time: 20200927115124
+	Cache expiry: 2592000
+	Dynamic content: false
+	Complications: []
+	CPU time usage: 0.528 seconds
+	Real time usage: 0.723 seconds
+	Preprocessor visited node count: 7282/1000000
+	Post‐expand include size: 181455/2097152 bytes
+	Template argument size: 51888/2097152 bytes
+	Highest expansion depth: 26/40
+	Expensive parser function count: 21/500
+	Unstrip recursion depth: 0/20
+	Unstrip post‐expand size: 9884/5000000 bytes
+	Lua time usage: 0.171/10.000 seconds
+	Lua memory usage: 5.17 MB/50 MB
+	Number of Wikibase entities loaded: 1/400
+	-->
+						<!--
+	Transclusion expansion time report (%,ms,calls,template)
+	100.00%  636.098      1 -total
+	 33.11%  210.633      1 Modèle:Infobox_Logiciel
+	 27.45%  174.587      1 Modèle:Palette
+	 25.05%  159.368      1 Modèle:Palette_API_web
+	 24.35%  154.890      1 Modèle:Méta_palette_de_navigation
+	 17.98%  114.366     20 Modèle:Lien
+	 17.74%  112.870     36 Modèle:Wikidata
+	 17.62%  112.088      2 Modèle:Méta_palette_de_navigation_sous-groupe
+	 16.96%  107.870      8 Modèle:Liste_éléments
+	 13.88%   88.313      1 Modèle:Références
+	-->
+
+						<!-- Saved in parser cache with key frwiki:pcache:idhash:15374-0!canonical and timestamp 20200927115123 and revision id 169839543
+	 -->
+					</div><noscript><img src="//fr.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+					<div class="printfooter">Ce document provient de «&nbsp;<a dir="ltr" href="https://fr.wikipedia.org/w/index.php?title=Document_Object_Model&amp;oldid=169839543">https://fr.wikipedia.org/w/index.php?title=Document_Object_Model&amp;oldid=169839543</a>&nbsp;».
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
