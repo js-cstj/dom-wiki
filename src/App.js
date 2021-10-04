@@ -6,7 +6,6 @@ export default class App {
 	 * Méthode principale. Sera appelée après le chargement de la page.
 	 */
 	static main() {
-		var app = document.getElementById("app");
 		this.supprimerModif();
 		this.supprimerLinkback();
 		this.supprimerReference();
@@ -17,17 +16,35 @@ export default class App {
 		this.centrerImage();
 		// this.marquerElements("p");
 	}
+	/**
+	 * Méthode centrerImage. Aligne au centre l'image qui se trouve dans le div ayant la classe "images"
+	 * Niveau : facile
+	 * @returns null Ne retourne rien
+	 */
 	static centrerImage() {
 		var divImages = document.querySelector("div.images");
 		divImages.style.textAlign = "center";
 	}
+
+	/**
+	 * Méthode marquerElements. Encadre chaque élément correspondant au sélecteur donné.
+	 * Le cadre est un pointillé rouge de 5 pixels
+	 * Niveau : moyen
+	 * @param {string} selecteur Le sélecteur des éléments à encadrer
+	 * @returns null Ne retourne rien
+	 */
 	static marquerElements(selecteur) {
 		var elements = Array.from(document.querySelectorAll(selecteur));
 		for (let i = 0; i < elements.length; i += 1) {
 			elements[i].style.border = "5px dotted red";
 		}
-
+		
 	}
+	/**
+	 * Méthode reglerA. Fait en sorte que tous les liens absolus (dont le href commence par "/") ouvrent dans un nouvel onglet (tarbet="_blank")
+	 * Niveau: difficile
+	 * @returns null Ne retourne rien
+	 */
 	static reglerA_zzz() {
 		var elements = Array.from(document.querySelectorAll("a[href^='/']"));
 		for (let i = 0; i < elements.length; i += 1) {
@@ -53,6 +70,12 @@ export default class App {
 		});
 
 	}
+	/**
+	 * Méthode supprimerElements. Supprime les éléments HTML correspondant au sélecteur donné.
+	 * Niveau: moyen
+	 * @param {string} selecteur Le sélecteur des éléments à encadrer
+	 * @returns null Ne retourne rien
+	 */
 	static supprimerElements(selecteur) {
 		var elements = Array.from(document.querySelectorAll(selecteur));
 		for (let i = 0; i < elements.length; i += 1) {
@@ -60,19 +83,37 @@ export default class App {
 		}
 		console.log("suppression", selecteur, elements.length)
 	}
+	/**
+	 * Méthode supprimerReference. Supprime toutes les balises <sup> ayant la classe "reference".
+	 * Note: Peut utiliser la méthode supprimerElements, mais ce n'est pas nécessaire. 
+	 * Niveau : moyen
+	 * @returns null Ne retourne rien
+	 */
 	static supprimerReference() {
 		var elements = Array.from(document.querySelectorAll("sup.reference"));
 		for (let i = 0; i < elements.length; i += 1) {
 			elements[i].parentNode.removeChild(elements[i]);
 		}
 	}
-	static supprimerLinkback() {
+	/**
+	 * Méthode supprimerLinkback. Supprime toutes les balises ayant les classes "noprint" et "wikidata-linkback".
+	 * Note: Peut utiliser la méthode supprimerElements, mais ce n'est pas nécessaire. 
+	 * Niveau : moyen
+	 * @returns null Ne retourne rien
+	 */
+	 static supprimerLinkback() {
 		var elements = Array.from(document.querySelectorAll(".noprint.wikidata-linkback"));
 		for (let i = 0; i < elements.length; i += 1) {
 			elements[i].parentNode.removeChild(elements[i]);
 		}
 	}
-	static supprimerModif() {
+	/**
+	 * Méthode supprimerModif. Supprime toutes les balises ayant la classe "mw-editsection".
+	 * Note: Peut utiliser la méthode supprimerElements, mais ce n'est pas nécessaire. 
+	 * Niveau : moyen
+	 * @returns null Ne retourne rien
+	 */
+	 static supprimerModif() {
 		var mods = Array.from(document.querySelectorAll(".mw-editsection"));
 		for (let i = 0; i < mods.length; i += 1) {
 			mods[i].parentNode.removeChild(mods[i]);

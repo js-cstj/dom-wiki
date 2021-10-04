@@ -8,6 +8,6 @@ Modification par programmation de la page Wiki portant sur le DOM
 - Rendre les liens absolus avec un target
 
 ## Méthodes utilitaires
-- __`supprimetElements`__  — Supprime des éléments en fonction du sélecteur fourni
+- __`supprimerElements`__  — Supprime des éléments en fonction du sélecteur fourni
 - __`marquerElements`__  — Encadre des éléments en fonction du sélecteur fourni
 
