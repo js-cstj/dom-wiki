@@ -1,4 +1,9 @@
 /**
+ * Consignes
+ * - Dans un premier temps, créer TOUTES les fonctions, qui ne font qu'un console.log de leur nom (ex: console.log("centrerImage");)
+ * - Décommenter l'appel des fonctions dans le main
+ * - Tester
+ * - Créer la logique de chaque fonction
  * @module App
  */
 export default class App {
@@ -6,15 +11,19 @@ export default class App {
 	 * Méthode principale. Sera appelée après le chargement de la page.
 	 */
 	static main() {
-		// this.supprimerModif();
-		// this.supprimerLinkback();
-		// this.supprimerReference();
-		// this.supprimerElements(".mw-cite-backlink");
-		// this.supprimerElements("#toc");
-		// this.supprimerElements(".navbar");
-		// this.reglerA();
-		// this.centrerImage();
-		// this.marquerElements("p");
+		// On exécute le nettoyage lorsque l'usager clique sur le bouton "Nettoyer"
+		document.getElementById("btnNettoyer").addEventListener("click", e => {
+			console.log("Je nettoie");
+			// this.supprimerModif();
+			// this.supprimerLinkback();
+			// this.supprimerReference();
+			// this.supprimerElements(".mw-cite-backlink");
+			// this.supprimerElements("#toc");
+			// this.supprimerElements(".navbar");
+			// this.reglerA();
+			// this.centrerImage();
+			// this.marquerElements("p");
+		});
 	}
 	/**
 	 * Méthode centrerImage. Aligne au centre l'image qui se trouve dans le div ayant la classe "images"
