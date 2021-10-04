@@ -6,15 +6,18 @@ export default class App {
 	 * Méthode principale. Sera appelée après le chargement de la page.
 	 */
 	static main() {
-		this.supprimerModif();
-		this.supprimerLinkback();
-		this.supprimerReference();
-		this.supprimerElements(".mw-cite-backlink");
-		this.supprimerElements("#toc");
-		this.supprimerElements(".navbar");
-		this.reglerA();
-		this.centrerImage();
-		// this.marquerElements("p");
+		// On exécute le nettoyage lorsque l'usager clique sur le bouton "Nettoyer"
+		document.getElementById("btnNettoyer").addEventListener("click", e => {
+			this.supprimerModif();
+			this.supprimerLinkback();
+			this.supprimerReference();
+			this.supprimerElements(".mw-cite-backlink");
+			this.supprimerElements("#toc");
+			this.supprimerElements(".navbar");
+			this.reglerA();
+			this.centrerImage();
+			// this.marquerElements("p");
+		})
 	}
 	/**
 	 * Méthode centrerImage. Aligne au centre l'image qui se trouve dans le div ayant la classe "images"
