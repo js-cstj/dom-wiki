@@ -1,4 +1,9 @@
 /**
+ * Consignes
+ * - Dans un premier temps, créer TOUTES les fonctions, qui ne font qu'un console.log de leur nom (ex: console.log("centrerImage");)
+ * - Décommenter l'appel des fonctions dans le main
+ * - Tester
+ * - Créer la logique de chaque fonction
  * @module App
  */
 export default class App {
