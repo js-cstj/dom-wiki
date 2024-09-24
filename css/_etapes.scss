@@ -1,0 +1,35 @@
+#etapes {
+	grid-row: 2;
+	grid-column: 2;
+	padding: 1em;
+	ul {
+		position: sticky;
+		top: 5em;
+		// background-color: #f5f5f5;
+		display: flex;
+		flex-direction: column;
+		// order:2;
+		gap: .5em;
+	}
+
+	h1 {
+		margin: 0;
+	}
+	button {
+		background-color: #333;
+		color: white;
+		border: 1px solid #333;
+		border-radius: .5em;
+		padding: .25em 1em;
+		font-size: 1em;
+		cursor: pointer;
+		width: 100%;
+		&:hover {
+			background-color: #444;
+		}
+		&.fait {
+			background-color: #363;
+			color: #fff6;
+		}
+	}
+}

@@ -1,3 +1,5 @@
+import Wiki from "./Wiki.js";
+
 /**
  * Consignes
  * - Dans un premier temps, créer TOUTES les fonctions, qui ne font qu'un console.log de leur nom (ex: console.log("centrerImage");)
@@ -12,130 +14,116 @@ export default class App {
 	 */
 	static main() {
 		// On exécute le nettoyage lorsque l'usager clique sur le bouton "Nettoyer"
+		document.getElementById("btnMarquer").addEventListener("click", e => {
+			document.body.classList.toggle("marquer");
+		});
 		document.getElementById("btnNettoyer").addEventListener("click", e => {
-			this.supprimerModif();
-			this.supprimerLinkback();
-			this.supprimerReference();
-			this.supprimerElements(".mw-cite-backlink");
-			this.supprimerElements("#toc");
-			this.supprimerElements(".navbar");
-			this.reglerA();
-			this.centrerImage();
-			// this.marquerElements("p");
-		})
-	}
-	/**
-	 * Méthode centrerImage. Aligne au centre l'image qui se trouve dans le div ayant la classe "images"
-	 * Niveau : facile
-	 * @returns null Ne retourne rien
-	 */
-	static centrerImage() {
-		var divImages = document.querySelector("div.images");
-		divImages.style.textAlign = "center";
-	}
-
-	/**
-	 * Méthode marquerElements. Encadre chaque élément correspondant au sélecteur donné.
-	 * Le cadre est un pointillé rouge de 5 pixels
-	 * Niveau : moyen
-	 * @param {string} selecteur Le sélecteur des éléments à encadrer
-	 * @returns null Ne retourne rien
-	 */
-	static marquerElements(selecteur) {
-		var elements = Array.from(document.querySelectorAll(selecteur));
-		for (let i = 0; i < elements.length; i += 1) {
-			elements[i].style.border = "5px dotted red";
-		}
-		
-	}
-	/**
-	 * Méthode reglerA. Fait en sorte que tous les liens absolus (dont le href commence par "/") ouvrent dans un nouvel onglet (tarbet="_blank")
-	 * Niveau: difficile
-	 * @returns null Ne retourne rien
-	 */
-	static reglerA_zzz() {
-		var elements = Array.from(document.querySelectorAll("a[href^='/']"));
-		for (let i = 0; i < elements.length; i += 1) {
-			var href = elements[i].getAttribute("href");
-			elements[i].href = "https://fr.wikipedia.org" + href;
-			elements[i].target = "_blank";
-		}
-	}
-	static reglerA() {
-		var elements = Array.from(document.querySelectorAll("a"));
-		console.log("avant", elements.length);
-		elements = elements.filter((el) => {
-			var href = el.getAttribute("href");
-			if (href[0] === "/") {
-				return true;
-			}
+			Wiki.nettoyer();
 		});
-		console.log("apres", elements.length);
-		elements.forEach(el => {
-			var href = el.getAttribute("href");
-			el.href = "https://fr.wikipedia.org" + href;
-			el.target = "_blank";
-		});
-
+		document.getElementById("interface").appendChild(this.html_etapes());
 	}
-	/**
-	 * Méthode supprimerElements. Supprime les éléments HTML correspondant au sélecteur donné.
-	 * Niveau: moyen
-	 * @param {string} selecteur Le sélecteur des éléments à encadrer
-	 * @returns null Ne retourne rien
-	 */
-	static supprimerElements(selecteur) {
-		var elements = Array.from(document.querySelectorAll(selecteur));
-		for (let i = 0; i < elements.length; i += 1) {
-			elements[i].parentNode.removeChild(elements[i]);
+	static html_etapes() {
+		const etapes = [
+			{
+				methode: () => {
+					Wiki.ajouterTitre();
+				},
+				niveau: "facile",
+				titre: "Ajouter un titre",
+			},
+			{
+				methode: () => {
+					Wiki.supprimerModif();
+				},
+				niveau: "moyen",
+				titre: "Supprimer les liens de modification",
+			},
+			{
+				methode: () => {
+					Wiki.supprimerLinkback();
+				},
+				niveau: "moyen",
+				titre: "Supprimer les liens de retour",
+			},
+			{
+				methode: () => {
+					Wiki.supprimerReference();
+				},
+				niveau: "moyen",
+				titre: "Supprimer les références",
+			},
+			{
+				methode: () => {
+					Wiki.supprimerElements(".mw-cite-backlink");
+				},
+				niveau: "moyen",
+				titre: "Supprimer les liens de citation",
+			},
+			{
+				methode: () => {
+					Wiki.supprimerElements("#toc");
+				},
+				niveau: "moyen",
+				titre: "Supprimer la table des matières",
+			},
+			{
+				methode: () => {
+					Wiki.supprimerElements(".navbar");
+				},
+				niveau: "moyen",
+				titre: "Supprimer la barre de navigation",
+			},
+			{
+				methode: () => {
+					Wiki.reglerA();
+				},
+				niveau: "difficile",
+				titre: "Diriger les liens vers Wikipedia",
+			},
+			{
+				methode: () => {
+					Wiki.centrerImage();
+				},
+				niveau: "facile",
+				titre: "Centrer l'image",
+			},
+			{
+				methode: () => {
+					Wiki.supprimerNotesEtReferences();
+				},
+				niveau: "moyen",
+				titre: "Supprimer la section 'Notes et références'",
+			},
+			{
+				methode: () => {
+					Wiki.supprimerLiensExternes();
+				},
+				niveau: "moyen",
+				titre: "Supprimer la section 'Liens externes'",
+			},
+		];
+		const navEtapes = document.body.appendChild(document.createElement("nav"));
+		navEtapes.id = "etapes";
+		const h1 = navEtapes.appendChild(document.createElement("h1"));
+		h1.textContent = "Étapes";
+		const ul = navEtapes.appendChild(document.createElement("ul"));
+		for (const etape of etapes) {
+			const li = ul.appendChild(document.createElement("li"));
+			const button = li.appendChild(document.createElement("button"));
+			button.textContent = etape.titre;
+			button.addEventListener("click", (e) => {
+				e.currentTarget.disabled = true;
+				e.currentTarget.classList.add("fait");
+				etape.methode();
+			});
 		}
-		console.log("suppression", selecteur, elements.length)
-	}
-	/**
-	 * Méthode supprimerReference. Supprime toutes les balises <sup> ayant la classe "reference".
-	 * Note: Peut utiliser la méthode supprimerElements, mais ce n'est pas nécessaire. 
-	 * Niveau : moyen
-	 * @returns null Ne retourne rien
-	 */
-	static supprimerReference() {
-		var elements = Array.from(document.querySelectorAll("sup.reference"));
-		for (let i = 0; i < elements.length; i += 1) {
-			elements[i].parentNode.removeChild(elements[i]);
-		}
-	}
-	/**
-	 * Méthode supprimerLinkback. Supprime toutes les balises ayant les classes "noprint" et "wikidata-linkback".
-	 * Note: Peut utiliser la méthode supprimerElements, mais ce n'est pas nécessaire. 
-	 * Niveau : moyen
-	 * @returns null Ne retourne rien
-	 */
-	 static supprimerLinkback() {
-		var elements = Array.from(document.querySelectorAll(".noprint.wikidata-linkback"));
-		for (let i = 0; i < elements.length; i += 1) {
-			elements[i].parentNode.removeChild(elements[i]);
-		}
-	}
-	/**
-	 * Méthode supprimerModif. Supprime toutes les balises ayant la classe "mw-editsection".
-	 * Note: Peut utiliser la méthode supprimerElements, mais ce n'est pas nécessaire. 
-	 * Niveau : moyen
-	 * @returns null Ne retourne rien
-	 */
-	 static supprimerModif() {
-		var mods = Array.from(document.querySelectorAll(".mw-editsection"));
-		for (let i = 0; i < mods.length; i += 1) {
-			mods[i].parentNode.removeChild(mods[i]);
-		}
-		
-	}
-	/**
-	 * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
-	 * @returns undefined Ne retourne rien
-	 */
-	static init() {
-		window.addEventListener("load", () => {
-			this.main();
-		});
+		// const li = ul.appendChild(document.createElement("li"));
+		// const fait = li.appendChild(document.createElement("button"));
+		// fait.classList.add("fait");
+		// fait.textContent = "Ajouter le titre";
+		// const li2 = ul.appendChild(document.createElement("li"));
+		// const button = li2.appendChild(document.createElement("button"));
+		// button.textContent = "Supprimer les backlinks";
+		return navEtapes;
 	}
 }
-App.init();

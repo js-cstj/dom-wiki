@@ -4,20 +4,25 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>DOM-WIKI</title>
-	<link rel="stylesheet" href="./src/style.css" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml" />
 	<script type="module">
 		import App from "./src/App.js";
+		App.main();
 	</script>
 </head>
 
 <body>
-	<div id="interface">
+		<div id="interface">
 		<header>
 			<h1>DOM-WIKI</h1>
-			<button id="btnNettoyer">Nettoyer</button>
+			<div>
+				<button id="btnMarquer">Marquer</button>
+				<button id="btnNettoyer">Nettoyer</button>
+			</div>
 		</header>
-		<footer><span>&copy; Web 3 : Dynamique</span><strong>DOM-WIKI</strong></footer>
-		<div class="body" id="app">
+		<div class="body marquer" id="app">
+			
 			<div id="bodyContent" class="mw-body-content">
 				<div id="siteSub" class="noprint">Un article de Wikipédia, l'encyclopédie libre.</div>
 				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="fr">
@@ -373,6 +378,7 @@
 				</div>
 			</div>
 		</div>
+		<footer><span>&copy; Web 3 : Dynamique</span><strong>DOM-WIKI</strong></footer>
 	</div>
 </body>
 

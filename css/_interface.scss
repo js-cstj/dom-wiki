@@ -1,0 +1,55 @@
+#interface, .interface {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr auto;
+	& > header, & > footer {
+		grid-column: 1 / -1;
+		padding: .5em 1em;
+		background-color: hsl(var(--h), var(--s), 30%);
+		color: hsl(var(--h), var(--s), 100%);
+		display: flex;
+		justify-content: space-between;
+	}
+	& > header {
+		box-shadow: 0 -1em 1em 1em black;
+		position: sticky;
+		z-index: 1000;
+		align-items: center;
+		top: 0;
+		button {
+			background-color: hsl(var(--h), var(--s), 50%);
+			color: hsl(var(--h), var(--s), 100%);
+			border: 1px solid hsl(var(--h), var(--s), 50%);
+			border-radius: .5em;
+			padding: .25em 1em;
+			font-size: 1em;
+			cursor: pointer;
+			&:hover {
+				background-color: hsl(var(--h), var(--s), 60%);
+			}
+		}
+	}
+	> footer {
+		grid-column: 1 / -1;
+		grid-row: 3;
+		z-index: 1000;
+	}
+	& > nav {
+		background-color: hsl(var(--h), var(--s), 35%);
+		color: hsl(var(--h), var(--s), 100%);
+	}
+	
+}
+body.marquer #btnMarquer {
+	background-color: hsl(var(--h), 50%, 80%);
+	color: hsl(var(--h), var(--s), 100%);
+	border: 1px solid hsl(var(--h), var(--s), 50%);
+	border-radius: .5em;
+	padding: .25em 1em;
+	font-size: 1em;
+	cursor: pointer;
+	&:hover {
+		background-color: hsl(60, 50%, 60%);
+	}
+}

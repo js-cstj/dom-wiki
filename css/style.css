@@ -1,0 +1,229 @@
+@import 'polices/serif-elegance.css';
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap");
+:root {
+  --h: 240;
+  --s: 0%;
+  --l: 50%;
+  --font-family: "Roboto", sans-serif;
+  --font-titre: "Roboto Slab", serif;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+body {
+  height: 100vh;
+}
+
+h1,
+h3,
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+h2,
+h4,
+th,
+legend,
+caption,
+label,
+figcaption,
+.subheading {
+  font-family: var(--font-subheading);
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#interface, .interface {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr auto;
+}
+#interface > header, #interface > footer, .interface > header, .interface > footer {
+  grid-column: 1/-1;
+  padding: 0.5em 1em;
+  background-color: hsl(var(--h), var(--s), 30%);
+  color: hsl(var(--h), var(--s), 100%);
+  display: flex;
+  justify-content: space-between;
+}
+#interface > header, .interface > header {
+  box-shadow: 0 -1em 1em 1em black;
+  position: sticky;
+  z-index: 1000;
+  align-items: center;
+  top: 0;
+}
+#interface > header button, .interface > header button {
+  background-color: hsl(var(--h), var(--s), 50%);
+  color: hsl(var(--h), var(--s), 100%);
+  border: 1px solid hsl(var(--h), var(--s), 50%);
+  border-radius: 0.5em;
+  padding: 0.25em 1em;
+  font-size: 1em;
+  cursor: pointer;
+}
+#interface > header button:hover, .interface > header button:hover {
+  background-color: hsl(var(--h), var(--s), 60%);
+}
+#interface > footer, .interface > footer {
+  grid-column: 1/-1;
+  grid-row: 3;
+  z-index: 1000;
+}
+#interface > nav, .interface > nav {
+  background-color: hsl(var(--h), var(--s), 35%);
+  color: hsl(var(--h), var(--s), 100%);
+}
+
+body.marquer #btnMarquer {
+  background-color: hsl(var(--h), 50%, 80%);
+  color: hsl(var(--h), var(--s), 100%);
+  border: 1px solid hsl(var(--h), var(--s), 50%);
+  border-radius: 0.5em;
+  padding: 0.25em 1em;
+  font-size: 1em;
+  cursor: pointer;
+}
+body.marquer #btnMarquer:hover {
+  background-color: hsl(60, 50%, 60%);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  display: flex;
+}
+nav ul li a {
+  flex-grow: 1;
+  display: flex;
+  padding: 6px 12px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  background: #333;
+  color: #fff;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 1em;
+}
+
+.infobox_v3 {
+  border: 1px solid black;
+  float: right;
+  margin-left: 1em;
+  padding: 1em;
+  width: 22em;
+  background-color: hsl(0, 0%, 95%);
+  font-size: smaller;
+}
+.infobox_v3 th[scope=row] {
+  width: 6em;
+  text-align: left;
+  vertical-align: baseline;
+}
+.infobox_v3 .entete {
+  background-color: hsl(209, 48%, 52%);
+  padding: 0.5em;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+#bodyContent {
+  width: 50em;
+  margin: 0 auto;
+  background-color: beige;
+  border: 16px solid transparent;
+  border-width: 0 16px;
+  -o-border-image: url("../img/papier.svg") 0 8 round;
+     border-image: url("../img/papier.svg") 0 8 round;
+  border-image-outset: 0 16px;
+  padding: 4em;
+  filter: drop-shadow(0.05em 0.05em 0.1em black);
+}
+#bodyContent h1 {
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+#bodyContent h2 {
+  border-bottom: 3px solid black;
+}
+#bodyContent h2, #bodyContent h3 {
+  margin-top: 1em;
+}
+#bodyContent p {
+  text-align: justify;
+  line-height: 2;
+}
+#bodyContent ul {
+  padding-left: 1em;
+}
+
+body.marquer a[href^="/"],
+body.marquer .navbar,
+body.marquer #toc,
+body.marquer .mw-cite-backlink,
+body.marquer sup.reference,
+body.marquer .noprint.wikidata-linkback,
+body.marquer .mw-editsection {
+  background-image: repeating-linear-gradient(45deg, transparent 0 0.2em, hsla(60, 100%, 30%, 0.5) 0.2em 0.4em) !important;
+}
+
+#etapes {
+  grid-row: 2;
+  grid-column: 2;
+  padding: 1em;
+}
+#etapes ul {
+  position: sticky;
+  top: 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+#etapes h1 {
+  margin: 0;
+}
+#etapes button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 0.5em;
+  padding: 0.25em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+}
+#etapes button:hover {
+  background-color: #444;
+}
+#etapes button.fait {
+  background-color: #363;
+  color: rgba(255, 255, 255, 0.4);
+}
