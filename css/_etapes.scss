@@ -1,11 +1,13 @@
 #etapes {
 	grid-row: 2;
 	grid-column: 2;
-	padding: 1em;
-	ul {
+	background-color: #f5f5f5;
+	nav {
 		position: sticky;
-		top: 5em;
-		// background-color: #f5f5f5;
+		top: 4em;
+		padding: 1em;
+	}
+	ul {
 		display: flex;
 		flex-direction: column;
 		// order:2;

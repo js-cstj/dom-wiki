@@ -1,3 +1,4 @@
+import etapes from "./etapes.js";
 import Wiki from "./Wiki.js";
 
 /**
@@ -20,90 +21,17 @@ export default class App {
 		document.getElementById("btnNettoyer").addEventListener("click", e => {
 			Wiki.nettoyer();
 		});
-		document.getElementById("interface").appendChild(this.html_etapes());
+		this.ajouterStyle();
+		document.getElementById("etapes").appendChild(this.html_etapes());
+	}
+	static ajouterStyle() {
+		const style = document.createElement("style");
+		style.textContent = `rien { background-image: var(--rayures); }`;
+		document.head.appendChild(style);
+		this.regleMarquer = style.sheet.cssRules[0];	
 	}
 	static html_etapes() {
-		const etapes = [
-			{
-				methode: () => {
-					Wiki.ajouterTitre();
-				},
-				niveau: "facile",
-				titre: "Ajouter un titre",
-			},
-			{
-				methode: () => {
-					Wiki.supprimerModif();
-				},
-				niveau: "moyen",
-				titre: "Supprimer les liens de modification",
-			},
-			{
-				methode: () => {
-					Wiki.supprimerLinkback();
-				},
-				niveau: "moyen",
-				titre: "Supprimer les liens de retour",
-			},
-			{
-				methode: () => {
-					Wiki.supprimerReference();
-				},
-				niveau: "moyen",
-				titre: "Supprimer les références",
-			},
-			{
-				methode: () => {
-					Wiki.supprimerElements(".mw-cite-backlink");
-				},
-				niveau: "moyen",
-				titre: "Supprimer les liens de citation",
-			},
-			{
-				methode: () => {
-					Wiki.supprimerElements("#toc");
-				},
-				niveau: "moyen",
-				titre: "Supprimer la table des matières",
-			},
-			{
-				methode: () => {
-					Wiki.supprimerElements(".navbar");
-				},
-				niveau: "moyen",
-				titre: "Supprimer la barre de navigation",
-			},
-			{
-				methode: () => {
-					Wiki.reglerA();
-				},
-				niveau: "difficile",
-				titre: "Diriger les liens vers Wikipedia",
-			},
-			{
-				methode: () => {
-					Wiki.centrerImage();
-				},
-				niveau: "facile",
-				titre: "Centrer l'image",
-			},
-			{
-				methode: () => {
-					Wiki.supprimerNotesEtReferences();
-				},
-				niveau: "moyen",
-				titre: "Supprimer la section 'Notes et références'",
-			},
-			{
-				methode: () => {
-					Wiki.supprimerLiensExternes();
-				},
-				niveau: "moyen",
-				titre: "Supprimer la section 'Liens externes'",
-			},
-		];
-		const navEtapes = document.body.appendChild(document.createElement("nav"));
-		navEtapes.id = "etapes";
+		const navEtapes = document.getElementById("etapes").appendChild(document.createElement("nav"));
 		const h1 = navEtapes.appendChild(document.createElement("h1"));
 		h1.textContent = "Étapes";
 		const ul = navEtapes.appendChild(document.createElement("ul"));
@@ -114,8 +42,21 @@ export default class App {
 			button.addEventListener("click", (e) => {
 				e.currentTarget.disabled = true;
 				e.currentTarget.classList.add("fait");
-				etape.methode();
+				etape.methode(Wiki);
 			});
+			if (etape.selecteur) {
+				let timeout;
+				button.addEventListener("mouseenter", (e) => {
+					this.regleMarquer.selectorText = etape.selecteur;
+					timeout = setTimeout(() => {
+						document.querySelector(etape.selecteur).scrollIntoView({ behavior: "smooth", block: "center" });
+					}, 1000);
+				});
+				button.addEventListener("mouseleave", (e) => {
+					this.regleMarquer.selectorText = "rien";
+					clearTimeout(timeout);
+				});
+			}
 		}
 		// const li = ul.appendChild(document.createElement("li"));
 		// const fait = li.appendChild(document.createElement("button"));

@@ -24,15 +24,17 @@
 }
 
 #bodyContent {
+    --epaisseur: .3em;
+    --rayures: repeating-linear-gradient(135deg, hsl(60, 100%, 50%, 0) 0 var(--epaisseur), hsl(0, 100%, 50%, .3) var(--epaisseur) calc(2 * var(--epaisseur))) !important;
     width: 50em;
     margin: 0 auto;
-    background-color: beige;
-    border: 16px solid transparent;
-    border-width: 0 16px;
-    border-image: url("../img/papier.svg") 0 8 round;
-    border-image-outset: 0 16px;
+    background-color: #e6e6df;
+    border: 16px solid #e6e6df;
+    border-width: 9px 15px;
+    border-image: url("../img/papier_3_5.svg") 3 5 round;
+    border-image-outset: 8.5px 14.5px;
     padding: 4em;
-    filter: drop-shadow(.05em .05em .1em black);
+    filter: drop-shadow(.05em .05em .1em #0006);
     h1 {
         text-align: center;
         font-size: 2.5em;
@@ -64,6 +66,6 @@ body.marquer {
     sup.reference,
     .noprint.wikidata-linkback,
     .mw-editsection {
-        background-image: repeating-linear-gradient(45deg, transparent 0 .2em, hsl(60, 100%, 30%, .5) .2em .4em) !important;
+        background-image: var(--rayures);
     }
 }
